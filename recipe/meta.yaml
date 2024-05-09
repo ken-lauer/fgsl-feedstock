@@ -1,5 +1,5 @@
 {% set name = "fgsl" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/reinh-bader/fgsl/archive/{{ version }}.tar.gz
-  sha256: 5013b4e000e556daac8b3c83192adfe8f36ffdc91d1d4baf0b1cb3100260e664
+  sha256: 8b6a02912b917e4544fed655b8e925c9b7160a063df57afcb35f064f351f1434
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -25,11 +25,7 @@ requirements:
     - libtool
     - gettext
   host:
-    - gsl ==2.6
-    - libblas
-    - libcblas
-  run:
-    - gsl ==2.6
+    - gsl ==2.7
     - libblas
     - libcblas
 
